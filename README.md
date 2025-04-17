@@ -15,8 +15,30 @@ My_SQL 基本練習
     PRIMARY KEY(`student_id`)
     ); //創建表格
     
-    DESCRIBE `Student`; //顯示
+    DESCRIBE `Student`; //顯示表格內欄位的屬性
     
     ALTER TABLE `Student` ADD `gpa` DECIMAL(3,2); //新增
     ALTER TABLE `Student` DROP COLUMN `gpa`; //刪除
+```
+```sql
+	CREATE DATABASE `test_sql`;
+    SHOW DATABASES;
+    USE `test_sql`;
+    
+    
+    CREATE TABLE `Student`(
+    `student_id` INT, 
+    `name` VARCHAR(50), 
+    `major` VARCHAR(50),
+    PRIMARY KEY(`student_id`)
+    );
+    
+    
+    INSERT INTO `Student` VALUES(1, '老王', '電機'); //新增表格內資料
+    INSERT INTO `Student` VALUES(2, '老李', '資訊');
+    INSERT INTO `Student` VALUES(3, '老楊', NULL);
+    INSERT INTO `Student`(`name`, `major`, `student_id`) VALUES('老白', '通訊', 4);
+    INSERT INTO `Student`(`major`, `student_id`) VALUES('通訊', 5);
+    DESCRIBE `Student`;
+    SELECT * FROM `Student`; //顯示表格內欄位的所有資料
 ```
