@@ -42,3 +42,12 @@ My_SQL 基本練習
     DESCRIBE `Student`;
     SELECT * FROM `Student`; //顯示表格內欄位的所有資料
 ```
+
+```sql
+    CREATE TABLE `Student`(
+    `student_id` INT, 
+    `name` VARCHAR(50) NOT NULL,  //不能為空
+    `major` VARCHAR(50) UNIQUE,  //不能重複
+    PRIMARY KEY(`student_id`)
+    );
+```
