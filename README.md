@@ -1,7 +1,7 @@
 # My_SQL
-My_SQL Practice
+My_SQL 基本練習
 
-## Basic Implement
+## 基本操作(創建/顯示/刪除/使用 資料庫, 創建/顯示/新增/刪除 表格/欄位)
 ```sql
     CREATE DATABASE `test_sql`;
     SHOW DATABASES;
