@@ -3,7 +3,7 @@ My_SQL Practice
 
 ## Basic Implement
 ```sql
-	CREATE DATABASE `test_sql`;
+    CREATE DATABASE `test_sql`;
     SHOW DATABASES;
     USE `test_sql`;
     
