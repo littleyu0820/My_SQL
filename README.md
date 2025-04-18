@@ -78,3 +78,31 @@ My_SQL 基本練習
     DESCRIBE `Student`;
     SELECT * FROM `Student`;
 ```
+
+```sql
+    SET SQL_SAFE_UPDATES = 0; //可以更新
+    CREATE TABLE `Student`(
+    `student_id` INT AUTO_INCREMENT, 
+    `name` VARCHAR(50), 
+    `major` VARCHAR(50),
+    `score` INT,
+    PRIMARY KEY(`student_id`)
+    );
+    
+    DROP TABLE `Student`;
+    
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老王', '英文', 98);
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老白', '自然', 92);
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老楊', '數學', 93);
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老李', '國語', 90);
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老陳', '社會', 96);
+    INSERT INTO `Student`(`name`, `major`, `score`) VALUES('老黃', '英文', 96);
+    
+    
+    UPDATE `Student` SET `major` = '英語' WHERE `major` = '英文'; //更新
+    UPDATE `Student` SET `name` = '老蕭', `major` = '化學' WHERE `student_id` = 1; //多格更新
+    DELETE FROM `Student` WHERE `student_id` = 6; //刪除
+    
+    DESCRIBE `Student`;
+    SELECT * FROM `Student`;
+```
