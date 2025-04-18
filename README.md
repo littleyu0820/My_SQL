@@ -21,7 +21,7 @@ My_SQL 基本練習
     ALTER TABLE `Student` DROP COLUMN `gpa`; //刪除
 ```
 ```sql
-	CREATE DATABASE `test_sql`;
+    CREATE DATABASE `test_sql`;
     SHOW DATABASES;
     USE `test_sql`;
     
