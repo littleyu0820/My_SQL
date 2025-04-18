@@ -118,7 +118,7 @@ My_SQL 基本練習
 
 ## 創建公司資料(練習題)
 ```sql
-	CREATE DATABASE `test_sql`;
+    CREATE DATABASE `test_sql`;
     SHOW DATABASES;
     USE `test_sql`;
     
@@ -133,8 +133,8 @@ My_SQL 基本練習
     `sup_id` INT,
     PRIMARY KEY(`emp_id`)
     );
-    
-	CREATE TABLE `Branch`(
+
+    CREATE TABLE `Branch`(
     `branch_id` INT,
     `branch_name` CHAR(50),
     `manager_id` INT,
@@ -153,7 +153,7 @@ My_SQL 基本練習
     PRIMARY KEY(`client_id`)
     );
     
-	CREATE TABLE `Work_With`(
+    CREATE TABLE `Work_With`(
     `emp_id` INT,
     `client_id` INT,
     `total_sales` INT,
@@ -168,7 +168,7 @@ My_SQL 基本練習
     SHOW DATABASES;
     DESCRIBE `Employee`;
     SELECT * FROM `Employee`;
-	DESCRIBE `Branch`;
+    DESCRIBE `Branch`;
     SELECT * FROM `Branch`;
     DESCRIBE `Client`;
     SELECT * FROM `Client`;
