@@ -115,3 +115,67 @@ My_SQL 基本練習
     SELECT * FROM `Student` WHERE `major` <> '自然'; //不等於
     SELECT * FROM `Student` WHERE `major` IN('自然','英文','國語') //等價於 =自然 and 英文 and 國語
 ```
+
+## 創建公司資料(練習題)
+```sql
+	CREATE DATABASE `test_sql`;
+    SHOW DATABASES;
+    USE `test_sql`;
+    
+    SET SQL_SAFE_UPDATES = 0;
+    CREATE TABLE `Employee`(
+    `emp_id` INT,
+    `name` CHAR(50),
+    `birth` DATE,
+    `sex` CHAR(5),
+    `salary` INT,
+    `branch_id` INT,
+    `sup_id` INT,
+    PRIMARY KEY(`emp_id`)
+    );
+    
+	CREATE TABLE `Branch`(
+    `branch_id` INT,
+    `branch_name` CHAR(50),
+    `manager_id` INT,
+    FOREIGN KEY(`manager_id`) REFERENCES `Employee`(`emp_id`) ON DELETE SET NULL,
+    PRIMARY KEY(`branch_id`)
+    );
+    
+    
+    ALTER TABLE `Employee` ADD FOREIGN KEY(`branch_id`) REFERENCES `Branch`(`branch_id`) ON DELETE SET NULL;
+    ALTER TABLE `Employee` ADD FOREIGN KEY(`sup_id`) REFERENCES `Employee`(`emp_id`) ON DELETE SET NULL;
+    
+    CREATE TABLE `Client`(
+    `client_id` INT,
+    `client_name` CHAR(50),
+    `phone` CHAR(50),
+    PRIMARY KEY(`client_id`)
+    );
+    
+	CREATE TABLE `Work_With`(
+    `emp_id` INT,
+    `client_id` INT,
+    `total_sales` INT,
+    FOREIGN KEY(`emp_id`) REFERENCES `Employee`(`emp_id`) ON DELETE CASCADE,
+    FOREIGN KEY(`client_id`) REFERENCES `Client`(`client_id`) ON DELETE CASCADE,
+    PRIMARY KEY(`emp_id`, `client_id`)
+    );
+    
+    
+    DROP TABLE `Work_With`;
+    
+    SHOW DATABASES;
+    DESCRIBE `Employee`;
+    SELECT * FROM `Employee`;
+	DESCRIBE `Branch`;
+    SELECT * FROM `Branch`;
+    DESCRIBE `Client`;
+    SELECT * FROM `Client`;
+    DESCRIBE `Work_With`;
+    SELECT * FROM `Work_With`;
+    
+    
+    
+    
+```
