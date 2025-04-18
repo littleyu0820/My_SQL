@@ -60,3 +60,21 @@ My_SQL 基本練習
     PRIMARY KEY(`student_id`)
     );
 ```
+
+```sql
+    CREATE TABLE `Student`(
+    `student_id` INT AUTO_INCREMENT, //自動增加
+    `name` VARCHAR(50), 
+    `major` VARCHAR(50),
+    PRIMARY KEY(`student_id`)
+    );
+    
+    DROP TABLE `Student`;
+    
+ 
+    INSERT INTO `Student`(`name`, `major`) VALUES('老白', '通訊'); //無須再加入studnet_id
+    INSERT INTO `Student`(`name`, `major`) VALUES('老王', '英語');
+   
+    DESCRIBE `Student`;
+    SELECT * FROM `Student`;
+```
