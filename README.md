@@ -51,3 +51,12 @@ My_SQL 基本練習
     PRIMARY KEY(`student_id`)
     );
 ```
+
+```sql
+    CREATE TABLE `Student`(
+    `student_id` INT, 
+    `name` VARCHAR(50), 
+    `major` VARCHAR(50) DEFAULT '歷史', //預設值
+    PRIMARY KEY(`student_id`)
+    );
+```
