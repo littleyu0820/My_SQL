@@ -106,3 +106,12 @@ My_SQL 基本練習
     DESCRIBE `Student`;
     SELECT * FROM `Student`;
 ```
+```sql
+    SELECT * FROM `Student` ORDER BY `score` ASC; //升序 預設
+    SELECT * FROM `Student` ORDER BY `score` DESC; //降序
+    SELECT * FROM `Student` ORDER BY `score`, `student_id`; 先排序score再排序student_id
+    SELECT * FROM `Student` LIMIT 3; //限制資料數量
+    SELECT * FROM `Student` ORDER BY `score` LIMIT 3; //混用 先排序再限制輸出數量
+    SELECT * FROM `Student` WHERE `major` <> '自然'; //不等於
+    SELECT * FROM `Student` WHERE `major` IN('自然','英文','國語') //等價於 =自然 and 英文 and 國語
+```
