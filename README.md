@@ -210,8 +210,10 @@ My_SQL 基本練習
     SELECT SUM(`salary`) FROM `employee`; //總和
     SELECT MAX(`salary`) FROM `employee`; //最大
     SELECT MIN(`salary`) FROM `employee`; //最小
-    
-    
+
+    // 一個%代表多個字元，一個_代表單個字元。
+    SELECT `client_name` FROM `client` WHERE `phone` LIKE '123%'; 
+    SELECT `name` FROM `employee` WHERE `name` LIKE '_白';
     
     
 ```
