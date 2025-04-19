@@ -163,17 +163,47 @@ My_SQL 基本練習
     );
     
     
-    DROP TABLE `Work_With`;
+    INSERT INTO `Branch` VALUES(1, '研發', NULL);
+	INSERT INTO `Branch` VALUES(2, '行政', NULL);
+    INSERT INTO `Branch` VALUES(3, '資訊', NULL);
+    
+    INSERT INTO `Employee` VALUES(206,'小黃','1999-01-01', 'F', 50000, 1, NULL);
+    INSERT INTO `Employee` VALUES(207,'小白','1999-08-01', 'M', 55000, 2, 206);
+    INSERT INTO `Employee` VALUES(208,'小黑','1989-02-13', 'F', 45000, 3, 206);
+    INSERT INTO `Employee` VALUES(209,'小綠','2001-11-13', 'F', 35000, 3, 207);
+    INSERT INTO `Employee` VALUES(210,'小洪','1992-05-28', 'M', 50800, 1, 207);
+    
+    UPDATE `Branch` SET `manager_id` = 206 WHERE `branch_name` = '研發';
+	UPDATE `Branch` SET `manager_id` = 207 WHERE `branch_name` = '行政';
+	UPDATE `Branch` SET `manager_id` = 208 WHERE `branch_name` = '資訊';
+    
+    
+    INSERT INTO `Client` VALUES(400, '阿狗', '123456789');
+    INSERT INTO `Client` VALUES(401, '阿貓', '223456789');
+    INSERT INTO `Client` VALUES(402, '阿鳥', '323456789');
+    INSERT INTO `Client` VALUES(403, '阿帥', '523456789');
+    INSERT INTO `Client` VALUES(404, '阿美', '623456789');
+    
+    INSERT INTO `Work_With` VALUES(206,400,70000);
+    INSERT INTO `Work_With` VALUES(207,401,24000);
+    INSERT INTO `Work_With` VALUES(208,402,9800);
+    INSERT INTO `Work_With` VALUES(209,403,24000);
+    INSERT INTO `Work_With` VALUES(210,404,88000);
     
     SHOW DATABASES;
     DESCRIBE `Employee`;
     SELECT * FROM `Employee`;
-    DESCRIBE `Branch`;
+	DESCRIBE `Branch`;
     SELECT * FROM `Branch`;
     DESCRIBE `Client`;
     SELECT * FROM `Client`;
     DESCRIBE `Work_With`;
     SELECT * FROM `Work_With`;
+    
+    
+    SELECT * FROM `Employee` ORDER BY `salary` DESC LIMIT 3;
+    SELECT `name` FROM `Employee`;
+    SELECT DISTINCT `sex` FROM `Employee`; //不顯示重複數據
     
     
     
