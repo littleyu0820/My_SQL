@@ -204,6 +204,12 @@ My_SQL 基本練習
     SELECT * FROM `Employee` ORDER BY `salary` DESC LIMIT 3;
     SELECT `name` FROM `Employee`;
     SELECT DISTINCT `sex` FROM `Employee`; //不顯示重複數據
+    SELECT COUNT(*) FROM `employee`;
+
+    SELECT AVG(`salary`) FROM `employee`; //平均
+    SELECT SUM(`salary`) FROM `employee`; //總和
+    SELECT MAX(`salary`) FROM `employee`; //最大
+    SELECT MIN(`salary`) FROM `employee`; //最小
     
     
     
