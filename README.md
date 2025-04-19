@@ -214,6 +214,16 @@ My_SQL 基本練習
     // 一個%代表多個字元，一個_代表單個字元。
     SELECT `client_name` FROM `client` WHERE `phone` LIKE '123%'; 
     SELECT `name` FROM `employee` WHERE `name` LIKE '_白';
-    
-    
+
+    SELECT `name` AS `total_name` FROM `employee` UNION SELECT `client_name` FROM `client`; //別名跟聯集
+
+    INSERT INTO  `branch` VALUES(4,'偷懶', NULL);   
+    SELECT * FROM `employee` JOIN `branch` ON `emp_id` = `manager_id`; //連接兩個表格
+    SELECT `branch_name` FROM `employee` RIGHT JOIN `branch` ON `emp_id` = `manager_id`;
+    SELECT `name` FROM `employee` WHERE `emp_id` = (SELECT `manager_id` FROM `branch` WHERE `branch_name` = '研發'); //子查詢單筆
+    SELECT `name` FROM `employee` WHERE `emp_id` IN(SELECT `manager_id` FROM `branch`); //子查詢多筆
+    DELETE FROM `employee` WHERE `emp_id` = 207;
+    SELECT * FROM `branch`;
+    SELECT * FROM `work_with`;
+
 ```
